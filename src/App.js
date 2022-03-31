@@ -1,15 +1,26 @@
+import './App.css';
 import Menu from "./components/Menu";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Alert, Button } from "react-bootstrap";
+import Carros from "./pages/Carros";
+import Array from "./pages/Array";
+import Objeto from "./pages/Objeto";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
-    
-    <Menu/>
-    <h1>Hello World</h1>
-    <Button variant="primary">Primary</Button>
-    <Alert variant="danger">Perigo</Alert>
+
+      <BrowserRouter>
+
+        <Menu />
+
+        <Routes>
+          <Route path="/carros" element={<Carros />} />
+          <Route path="/array" element={<Array />} />
+          <Route path="/objeto" element={<Objeto />} />
+        </Routes>
+
+      </BrowserRouter>
     </div>
   );
 }
