@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Carros = () => {
-  return (
-    <div>Carros</div>
-  )
+    return (
+        <div>Carros</div>
+    )
 }
 
 export default Carros
